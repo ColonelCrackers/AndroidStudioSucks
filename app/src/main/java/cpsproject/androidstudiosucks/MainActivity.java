@@ -1,5 +1,7 @@
 package cpsproject.androidstudiosucks;
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -19,6 +21,7 @@ public class MainActivity extends Activity
     ConnectionClass connectionClass;
     EditText edtuserid,edtpass;
     Button btnlogin;
+    Button notification;
     ProgressBar pbbar;
 
     @Override
@@ -38,6 +41,9 @@ public class MainActivity extends Activity
             public void onClick(View v) {
                 DoLogin  doLogin = new DoLogin();
                 doLogin.execute("");
+                MainActivity.this.openSettings(v);
+
+         notification = (Button)findViewById(R.id.Notification);
 
             }
         });
@@ -80,6 +86,7 @@ public class MainActivity extends Activity
                     Connection con = connectionClass.CONN();
                     if (con == null) {
                         z = "Error in connection with SQL server";
+                        isSuccess = true;
                     } else {
                         String query = "select * from pathologic_app_users where username='" + userid + "' and password='" + password + "'";
                         Statement stmt = con.createStatement();
@@ -113,8 +120,20 @@ public class MainActivity extends Activity
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
+    //builds a notification
+    public void getNotification(View view) {
+        NotificationManager notificationmgr = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 
-    //first revision
+        Notification notif = new Notification.Builder(this)
+                .setSmallIcon(R.drawable.alarm)
+                .setContentTitle("Motion Sensor Triggered")
+                .setContentText("Your device detected motion! You may want to alert the authorities.")
+                .build();
+
+        notificationmgr.notify(0, notif);
+    }
+
+    //second revision
 }
 
 

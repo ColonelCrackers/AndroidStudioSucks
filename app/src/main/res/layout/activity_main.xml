@@ -27,6 +27,13 @@
             android:layout_marginTop="10dp"
             android:id="@+id/et_password"
             android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/Notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="getNotification"
+            android:text="Send Notification" />
     </LinearLayout>
     <LinearLayout
         android:layout_marginLeft="110dp"

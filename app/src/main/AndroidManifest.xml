@@ -18,7 +18,12 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"></activity>
-    </application>
+            android:label="@string/title_activity_settings" />
 
+
+    </application>
+    <service
+        android:name=".PopupMessageService"
+        android:enabled="true"
+        android:exported="true" />
 </manifest>

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/AndroidStudioSucks2.iml" filepath="$PROJECT_DIR$/AndroidStudioSucks2.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/AndroidStudioSucksV2.iml" filepath="$PROJECT_DIR$/AndroidStudioSucksV2.iml" />
->>>>>>> bfe9f1b93cd59949ee112804038992ac290576ba
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioSucks.iml" filepath="$PROJECT_DIR$/AndroidStudioSucks.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mysql-connector-java-5.1.41-bin/mysql-connector-java-5.1.41-bin.iml" filepath="$PROJECT_DIR$/mysql-connector-java-5.1.41-bin/mysql-connector-java-5.1.41-bin.iml" />
     </modules>

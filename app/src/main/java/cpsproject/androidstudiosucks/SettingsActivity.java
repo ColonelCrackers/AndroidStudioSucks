@@ -34,6 +34,8 @@ import java.util.List;
  * API Guide</a> for more information on developing a Settings UI.
  */
 public class SettingsActivity extends AppCompatPreferenceActivity {
+
+
     /**
      * A preference value change listener that updates the preference's summary
      * to reflect its new value.
@@ -120,6 +122,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupActionBar();
+        setContentView(R.layout.activity_settings);
     }
 
     /**
